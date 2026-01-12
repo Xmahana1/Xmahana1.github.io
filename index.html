@@ -1,156 +1,124 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>José Enrique | Portafolio Data Analyst</title>
-  <style>
-    :root { --bg:#0b0d10; --card:#121622; --txt:#e9eef5; --muted:#a9b3c1; --acc:#7aa2ff; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt);}
-    a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
-    .hero{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:22px;border:1px solid #20283a;border-radius:16px;background:linear-gradient(180deg,#0f1420,transparent)}
-    .avatar{width:96px;height:96px;border-radius:16px;background:#1b2333;display:grid;place-items:center;font-weight:700;color:var(--muted)}
-    h1{margin:0;font-size:28px}
-    .tag{color:var(--muted);margin-top:6px}
-    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .btn{padding:10px 12px;border-radius:12px;background:var(--card);border:1px solid #20283a;display:inline-block}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:18px}
-    .card{grid-column:span 12;background:var(--card);border:1px solid #20283a;border-radius:16px;padding:16px}
-    @media(min-width:860px){ .card.half{grid-column:span 6} }
-    .muted{color:var(--muted)}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .chip{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #2a3550;color:var(--muted)}
-    .proj{display:flex;flex-direction:column;gap:10px}
-    .proj h3{margin:0;font-size:18px}
-    .proj p{margin:0;color:var(--muted);line-height:1.45}
-    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .foot{margin-top:22px;color:var(--muted);font-size:13px}
-    hr{border:none;border-top:1px solid #20283a;margin:14px 0;}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>José Enrique | Portafolio Data Analyst</title>
+
+<style>
+:root{
+ --bg:#0b0d10;--card:#121622;--txt:#e9eef5;--muted:#a9b3c1;--acc:#7aa2ff;--border:#20283a;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;
+ background:radial-gradient(1200px 700px at 20% 0%,#101a2d 0%,var(--bg) 60%);
+ color:var(--txt)
+}
+.wrap{max-width:1060px;margin:auto;padding:28px}
+.hero{display:flex;gap:18px;flex-wrap:wrap;align-items:center;
+ border:1px solid var(--border);border-radius:18px;padding:22px;background:#121622}
+.avatar{width:90px;height:90px;border-radius:16px;background:#1b2333;display:grid;place-items:center;font-weight:800}
+a{color:var(--acc);text-decoration:none}
+.btn{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#0f1420}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:20px}
+.card{grid-column:span 12;background:#121622;border:1px solid var(--border);border-radius:16px;padding:16px}
+@media(min-width:900px){.half{grid-column:span 6}.proj{grid-column:span 6}}
+.projects{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.proj{grid-column:span 12;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.thumb{aspect-ratio:16/9}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.chips span{border:1px solid #2a3550;border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted)}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <section class="hero">
-      <div class="avatar">JE</div>
-      <div>
-        <h1>José Enrique | Data Analyst Jr</h1>
-        <div class="tag">SQL · Python · Tableau · Power BI · Análisis estadístico</div>
+<section class="hero">
+<div class="avatar">JE</div>
+<div>
+<h1>José Enrique | Data Analyst Jr</h1>
+<div>SQL · Python · Tableau · Power BI · Análisis estadístico</div>
+<br>
+<a class="btn" href="https://github.com/Xmahana1">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/">LinkedIn</a>
+<a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
+</div>
+</section>
 
-        <div class="btns">
-          <a class="btn" href="https://github.com/Xmahana1" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
-        </div>
+<section class="grid">
 
-        <div class="tag" style="margin-top:10px;">
-          Enfoque: análisis de negocio, experimentación (A/B) y visualización para tomar decisiones.
-        </div>
-      </div>
-    </section>
+<div class="card half">
+<h2>Sobre mí</h2>
+<p>Soy biólogo entomólogo en transición a análisis de datos, enfocado en métricas, pruebas y dashboards.</p>
+</div>
 
-    <section class="grid">
+<div class="card half">
+<h2>Qué encontrarás aquí</h2>
+<ul>
+<li>Proyectos end-to-end</li>
+<li>Métricas y decisiones de negocio</li>
+<li>Dashboards y análisis reproducibles</li>
+</ul>
+</div>
 
-      <div class="card half">
-        <h2 style="margin:0 0 8px 0;">Sobre mí</h2>
-        <p class="muted" style="margin:0;line-height:1.5;">
-          Soy biólogo entomólogo en transición a análisis de datos. Me gusta trabajar con métricas, pruebas,
-          segmentación y dashboards para convertir datos en decisiones claras.
-        </p>
-        <div class="chips">
-          <span class="chip">SQL</span>
-          <span class="chip">Python (Pandas)</span>
-          <span class="chip">EDA</span>
-          <span class="chip">A/B Testing</span>
-          <span class="chip">Visualización</span>
-        </div>
-      </div>
+<div class="card">
+<h2>Proyectos</h2>
+<div class="projects">
 
-      <div class="card half">
-        <h2 style="margin:0 0 8px 0;">Qué encontrarás aquí</h2>
-        <ul class="muted" style="margin:0;padding-left:18px;line-height:1.55;">
-          <li>Proyectos end-to-end: limpieza, análisis, conclusión.</li>
-          <li>Entregables reproducibles (notebooks / apps).</li>
-          <li>Enfoque en decisiones: métricas y recomendaciones.</li>
-        </ul>
-      </div>
+<!-- AB TESTING -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/ab-testing-marketing-analysis.png"></div>
+<div class="card">
+<h3>A/B Testing — Marketing Analysis</h3>
+<a class="btn" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis">Repo</a>
+</div></div>
 
-      <div class="card">
-        <h2 style="margin:0 0 10px 0;">Proyectos</h2>
+<!-- BOOK -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/book-data-analysis.png"></div>
+<div class="card">
+<h3>Book Service — Data Analysis</h3>
+<a class="btn" href="https://github.com/Xmahana1/Book-Service">Repo</a>
+</div></div>
 
-        <!-- PROYECTO 1 -->
-        <div class="proj">
-          <h3>A/B Testing + Marketing Analysis</h3>
-          <p>
-            Análisis de marketing con enfoque en experimentación: evaluación de resultados, métricas
-            y decisión final basada en evidencia.
-          </p>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">Estadística</span>
-            <span class="chip">A/B testing</span>
-          </div>
-          <div class="links">
-            <a class="btn" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis" target="_blank" rel="noreferrer">Repo</a>
-          </div>
-        </div>
+<!-- VEHICLE -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/vehicle-dashboard.png"></div>
+<div class="card">
+<h3>Vehicle Dashboard — Streamlit</h3>
+<a class="btn" href="https://github.com/Xmahana1/Vehicle-Dashboard-">Repo</a>
+</div></div>
 
-        <hr>
+<!-- SQL -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/sql-vehicle-pricing-analysis.png"></div>
+<div class="card">
+<h3>SQL — Vehicle Pricing Analysis</h3>
+<a class="btn" href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis">Repo</a>
+</div></div>
 
-        <!-- PROYECTO 2 -->
-        <div class="proj">
-          <h3>Book Service (Análisis)</h3>
-          <p>
-            Exploración y análisis de datos para entender comportamiento/uso del servicio y obtener
-            insights accionables.
-          </p>
-          <div class="chips">
-            <span class="chip">SQL</span>
-            <span class="chip">Python</span>
-            <span class="chip">EDA</span>
-          </div>
-          <div class="links">
-            <a class="btn" href="https://github.com/Xmahana1/Book-Service" target="_blank" rel="noreferrer">Repo</a>
-          </div>
-        </div>
+<!-- ROMI -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/marketing-analytics-romi-cac.jpg"></div>
+<div class="card">
+<h3>Marketing Analytics — ROMI & CAC</h3>
+<a class="btn" href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC">Repo</a>
+</div></div>
 
-        <hr>
+<!-- TELECOM -->
+<div class="proj">
+<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/telecom-call-center-efficiency-analysis.png"></div>
+<div class="card">
+<h3>Telecom — Call Center Efficiency</h3>
+<a class="btn" href="https://github.com/Xmahana1/Telecom-CallMeMaybe">Repo</a>
+</div></div>
 
-        <!-- PROYECTO 3 -->
-        <div class="proj">
-          <h3>Vehicle Dashboard (App)</h3>
-          <p>
-            Dashboard/app para explorar datos de vehículos con filtros y visualizaciones para análisis rápido.
-          </p>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">Streamlit</span>
-            <span class="chip">Dashboards</span>
-          </div>
-          <div class="links">
-            <a class="btn" href="https://github.com/Xmahana1/Vehicle-Dashboard-" target="_blank" rel="noreferrer">Repo</a>
-          </div>
-        </div>
+</div>
+</div>
 
-      </div>
-
-      <div class="card">
-        <h2 style="margin:0 0 8px 0;">Contacto</h2>
-        <p class="muted" style="margin:0;line-height:1.5;">
-          Si quieres hablar de proyectos, vacantes junior o roles remotos: <a href="mailto:insectario.jr@gmail.com">insectario.jr@gmail.com</a>
-        </p>
-      </div>
-
-    </section>
-
-    <div class="foot">© <span id="y"></span> José Enrique — Portafolio</div>
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+</section>
+</div>
 </body>
 </html>
