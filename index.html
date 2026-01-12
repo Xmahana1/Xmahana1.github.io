@@ -57,4 +57,174 @@
     .proj-body{padding:14px 16px}
     .proj-title{margin:0 0 8px 0;font-size:18px}
     .proj-desc{margin:0;color:var(--muted);line-height:1.45}
-    .proj-actions{ma
+    .proj-actions{margin-top:10px}
+
+    .proj-imgwrap{
+      background:#0c1020;
+      border-top:1px solid var(--border);
+      display:block;
+    }
+    .proj-img{
+      display:block;width:100%;
+      height:auto; /* importante: no “rompe” si la imagen es vertical */
+      max-height:520px;
+      object-fit:cover;
+    }
+    .img-fallback{
+      padding:18px;color:var(--muted);
+      font-size:13px;
+    }
+    .foot{margin:18px 0 0;color:var(--muted);font-size:13px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="avatar">JE</div>
+      <div>
+        <h1 style="margin:0">José Enrique | Data Analyst Jr</h1>
+        <div style="color:var(--muted);margin-top:6px">SQL · Python · Tableau · Power BI · Análisis estadístico</div>
+
+        <div>
+          <a class="btn" href="https://github.com/Xmahana1" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
+        </div>
+
+        <div style="color:var(--muted);margin-top:10px">
+          Enfoque: análisis de negocio, experimentación (A/B) y visualización para tomar decisiones.
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <div class="card half">
+        <h2 style="margin:0 0 8px 0;">Sobre mí</h2>
+        <p style="margin:0;color:var(--muted);line-height:1.5">
+          Soy biólogo entomólogo en transición a análisis de datos, enfocado en métricas, pruebas,
+          segmentación y dashboards.
+        </p>
+      </div>
+
+      <div class="card half">
+        <h2 style="margin:0 0 8px 0;">Qué encontrarás aquí</h2>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.55">
+          <li>Proyectos end-to-end</li>
+          <li>Métricas orientadas a negocio</li>
+          <li>Dashboards y análisis reproducibles</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px 0;">Proyectos</h2>
+
+        <div class="projects">
+
+          <!-- 1 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">A/B Testing — Marketing Analysis</h3>
+              <p class="proj-desc">Evaluación de experimento A/B para medir significancia estadística e impacto en conversión.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/ab-testing-marketing-analysis.png" alt="A/B Testing Marketing Analysis"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/ab-testing-marketing-analysis.png</div>';">
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">Book Service — Data Analysis</h3>
+              <p class="proj-desc">Análisis de datos del servicio de libros: patrones, ratings, reviews e insights accionables.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/Book-Service" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/book-data-analysis.png" alt="Book Data Analysis"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/book-data-analysis.png</div>';">
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">Vehicle Dashboard — Streamlit</h3>
+              <p class="proj-desc">App interactiva para explorar y visualizar un dataset de ventas de vehículos (USA) sin escribir código.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/Vehicle-Dashboard-" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/vehicle-dashboard.png" alt="Vehicle Dashboard"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/vehicle-dashboard.png</div>';">
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">SQL — Vehicle Pricing Analysis</h3>
+              <p class="proj-desc">Caso SQL para identificar patrones de precio, diferencias por categoría y anomalías de mercado.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/sql-vehicle-pricing-analysis.png" alt="SQL Vehicle Pricing Analysis"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/sql-vehicle-pricing-analysis.png</div>';">
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">Marketing Analytics — ROMI & CAC</h3>
+              <p class="proj-desc">Análisis de eficiencia de marketing: ROMI, CAC y métricas para decisiones de inversión.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/marketing-analytics-romi-cac.jpg" alt="Marketing Analytics ROMI CAC"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/marketing-analytics-romi-cac.jpg</div>';">
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="proj">
+            <div class="proj-body">
+              <h3 class="proj-title">Telecom — Call Center Efficiency Analysis</h3>
+              <p class="proj-desc">Identificar operadores ineficientes, cuantificar impacto y priorizar acciones para reducir pérdidas.</p>
+              <div class="proj-actions">
+                <a class="btn" href="https://github.com/Xmahana1/Telecom-CallMeMaybe" target="_blank" rel="noreferrer">Repo</a>
+              </div>
+            </div>
+            <div class="proj-imgwrap">
+              <img class="proj-img" src="assets/img/telecom-call-center-efficiency-analysis.png" alt="Telecom Call Center Efficiency"
+                   onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>Image not found: assets/img/telecom-call-center-efficiency-analysis.png</div>';">
+            </div>
+          </article>
+
+        </div>
+
+        <div class="foot">© <span id="y"></span> José Enrique — Portafolio</div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
