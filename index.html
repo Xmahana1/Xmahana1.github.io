@@ -2,25 +2,41 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>José Enrique | Portafolio Data Analyst</title>
 
 <style>
 :root{
- --bg:#0b0d10;--card:#121622;--txt:#e9eef5;--muted:#a9b3c1;--acc:#7aa2ff;--border:#20283a;
+ --bg:#0b0d10;
+ --card:#121622;
+ --txt:#e9eef5;
+ --muted:#a9b3c1;
+ --acc:#7aa2ff;
+ --border:#20283a;
 }
 *{box-sizing:border-box}
 body{
- margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;
+ margin:0;
+ font-family:system-ui,Segoe UI,Roboto,Arial;
  background:radial-gradient(1200px 700px at 20% 0%,#101a2d 0%,var(--bg) 60%);
  color:var(--txt)
 }
-.wrap{max-width:1060px;margin:auto;padding:28px}
-.hero{display:flex;gap:18px;flex-wrap:wrap;align-items:center;
- border:1px solid var(--border);border-radius:18px;padding:22px;background:#121622}
-.avatar{width:90px;height:90px;border-radius:16px;background:#1b2333;display:grid;place-items:center;font-weight:800}
+.wrap{max-width:1100px;margin:auto;padding:28px}
+.hero{
+ display:flex;gap:18px;flex-wrap:wrap;align-items:center;
+ border:1px solid var(--border);border-radius:18px;padding:22px;
+ background:linear-gradient(180deg,#121622,#0f1420)
+}
+.avatar{
+ width:92px;height:92px;border-radius:18px;
+ background:#1b2333;display:grid;place-items:center;
+ font-weight:800;color:#cfe0ff
+}
 a{color:var(--acc);text-decoration:none}
-.btn{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#0f1420}
+.btn{
+ padding:10px 14px;border:1px solid var(--border);
+ border-radius:12px;background:#0f1420;display:inline-block;margin-right:6px
+}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:20px}
 .card{grid-column:span 12;background:#121622;border:1px solid var(--border);border-radius:16px;padding:16px}
 @media(min-width:900px){.half{grid-column:span 6}.proj{grid-column:span 6}}
@@ -28,7 +44,10 @@ a{color:var(--acc);text-decoration:none}
 .proj{grid-column:span 12;border:1px solid var(--border);border-radius:16px;overflow:hidden}
 .thumb{aspect-ratio:16/9}
 .thumb img{width:100%;height:100%;object-fit:cover}
-.chips span{border:1px solid #2a3550;border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted)}
+.chips span{
+ border:1px solid #2a3550;border-radius:999px;
+ padding:4px 10px;font-size:12px;color:var(--muted);margin-right:6px
+}
 </style>
 </head>
 
@@ -39,8 +58,7 @@ a{color:var(--acc);text-decoration:none}
 <div class="avatar">JE</div>
 <div>
 <h1>José Enrique | Data Analyst Jr</h1>
-<div>SQL · Python · Tableau · Power BI · Análisis estadístico</div>
-<br>
+<div>SQL · Python · Tableau · Power BI · Análisis estadístico</div><br>
 <a class="btn" href="https://github.com/Xmahana1">GitHub</a>
 <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/">LinkedIn</a>
 <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
@@ -51,14 +69,14 @@ a{color:var(--acc);text-decoration:none}
 
 <div class="card half">
 <h2>Sobre mí</h2>
-<p>Soy biólogo entomólogo en transición a análisis de datos, enfocado en métricas, pruebas y dashboards.</p>
+<p>Soy biólogo entomólogo en transición a análisis de datos, enfocado en métricas, pruebas, segmentación y dashboards.</p>
 </div>
 
 <div class="card half">
 <h2>Qué encontrarás aquí</h2>
 <ul>
 <li>Proyectos end-to-end</li>
-<li>Métricas y decisiones de negocio</li>
+<li>Métricas orientadas a negocio</li>
 <li>Dashboards y análisis reproducibles</li>
 </ul>
 </div>
@@ -67,49 +85,43 @@ a{color:var(--acc);text-decoration:none}
 <h2>Proyectos</h2>
 <div class="projects">
 
-<!-- AB TESTING -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/ab-testing-marketing-analysis.png"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/ab-testing-marketing-analysis.png"></div>
 <div class="card">
 <h3>A/B Testing — Marketing Analysis</h3>
 <a class="btn" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis">Repo</a>
 </div></div>
 
-<!-- BOOK -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/book-data-analysis.png"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/book-data-analysis.png"></div>
 <div class="card">
 <h3>Book Service — Data Analysis</h3>
 <a class="btn" href="https://github.com/Xmahana1/Book-Service">Repo</a>
 </div></div>
 
-<!-- VEHICLE -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/vehicle-dashboard.png"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/vehicle-dashboard.png"></div>
 <div class="card">
 <h3>Vehicle Dashboard — Streamlit</h3>
 <a class="btn" href="https://github.com/Xmahana1/Vehicle-Dashboard-">Repo</a>
 </div></div>
 
-<!-- SQL -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/sql-vehicle-pricing-analysis.png"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/sql-vehicle-pricing-analysis.png"></div>
 <div class="card">
 <h3>SQL — Vehicle Pricing Analysis</h3>
 <a class="btn" href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis">Repo</a>
 </div></div>
 
-<!-- ROMI -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/marketing-analytics-romi-cac.jpg"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/marketing-analytics-romi-cac.jpg"></div>
 <div class="card">
 <h3>Marketing Analytics — ROMI & CAC</h3>
 <a class="btn" href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC">Repo</a>
 </div></div>
 
-<!-- TELECOM -->
 <div class="proj">
-<div class="thumb"><img src="https://raw.githubusercontent.com/Xmahana1/Xmahana1.github.io/main/assets/img/telecom-call-center-efficiency-analysis.png"></div>
+<div class="thumb"><img src="https://xmahana1.github.io/assets/img/telecom-call-center-efficiency-analysis.png"></div>
 <div class="card">
 <h3>Telecom — Call Center Efficiency</h3>
 <a class="btn" href="https://github.com/Xmahana1/Telecom-CallMeMaybe">Repo</a>
@@ -122,3 +134,4 @@ a{color:var(--acc);text-decoration:none}
 </div>
 </body>
 </html>
+
