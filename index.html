@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>José Enrique | Portafolio Data Analyst</title>
+  <title>José Enrique | Data Analyst Jr</title>
 
   <style>
     :root{
@@ -16,83 +16,145 @@
     }
 
     *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     }
 
     body{
-      background: var(--bg);
-      color: var(--txt);
-      line-height: 1.6;
+      background:var(--bg);
+      color:var(--txt);
+      line-height:1.6;
     }
 
     .container{
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
     }
 
-    /* Perfil */
-    .profile{
-      text-align: center;
-      margin-bottom: 30px;
+    /* HERO */
+    .hero{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      background:linear-gradient(135deg,#0f1420,#0b0d10);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+      margin-bottom:32px;
     }
 
-    .profile img{
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--acc);
-      margin-bottom: 15px;
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#0f1420;
+      flex-shrink:0;
     }
 
-    h1{
-      font-size: 2rem;
-      margin-bottom: 5px;
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
-    .subtitle{
-      color: var(--muted);
-      font-size: 1rem;
+    .hero h1{
+      font-size:1.8rem;
+      margin-bottom:6px;
     }
 
-    /* Tarjetas */
+    .hero p{
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:8px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#0f1420;
+      color:var(--txt);
+      text-decoration:none;
+      font-size:.9rem;
+    }
+
+    .btn:hover{
+      border-color:var(--acc);
+      color:var(--acc);
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+    }
+
     .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 25px;
-      margin-top: 25px;
+      background:linear-gradient(135deg,#0f1420,#0b0d10);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
     }
 
     h2{
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: var(--acc);
-    }
-
-    p{
-      color: var(--muted);
-      margin-bottom: 10px;
+      font-size:1.2rem;
+      margin-bottom:10px;
+      color:var(--acc);
     }
 
     ul{
-      margin-left: 20px;
-      color: var(--muted);
+      margin-left:18px;
+      color:var(--muted);
     }
 
     li{
-      margin-bottom: 6px;
+      margin-bottom:6px;
+    }
+
+    /* PROYECTOS */
+    .projects{
+      margin-top:32px;
+    }
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .project{
+      background:#0f1420;
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .project img{
+      width:100%;
+      display:block;
+    }
+
+    .project .info{
+      padding:16px;
     }
 
     footer{
-      text-align: center;
-      margin-top: 40px;
-      color: var(--muted);
-      font-size: 0.9rem;
+      text-align:center;
+      margin-top:40px;
+      color:var(--muted);
+      font-size:.85rem;
     }
   </style>
 </head>
@@ -100,42 +162,61 @@
 <body>
   <div class="container">
 
-    <!-- PERFIL -->
-    <div class="profile">
-      <img src="assets/img/profile.jpg" alt="Foto de perfil de José Enrique">
-      <h1>José Enrique</h1>
-      <div class="subtitle">Data Analyst Jr · Python · SQL · BI</div>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="avatar">
+        <img src="assets/img/profile.jpg" alt="Foto de perfil de José Enrique">
+      </div>
+      <div>
+        <h1>José Enrique | Data Analyst Jr</h1>
+        <p>SQL · Python · Tableau · Power BI · Análisis estadístico</p>
+        <div class="buttons">
+          <a class="btn" href="https://github.com/Xmahana1" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/" target="_blank">LinkedIn</a>
+          <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
+        </div>
+      </div>
     </div>
 
-    <!-- SOBRE MÍ -->
-    <div class="card">
-      <h2>Sobre mí</h2>
-      <p>
-        Analista de datos junior con formación científica y experiencia en análisis,
-        visualización y toma de decisiones basada en datos. Interesado en salud,
-        marketing y proyectos con impacto real.
-      </p>
-    </div>
+    <!-- INFO -->
+    <div class="grid">
+      <div class="card">
+        <h2>Sobre mí</h2>
+        <p style="color:var(--muted)">
+          Biólogo entomólogo en transición a análisis de datos, enfocado en métricas,
+          pruebas, segmentación y dashboards orientados a negocio.
+        </p>
+      </div>
 
-    <!-- HABILIDADES -->
-    <div class="card">
-      <h2>Habilidades</h2>
-      <ul>
-        <li>Python (pandas, numpy, matplotlib)</li>
-        <li>SQL (consultas complejas, CTEs, ventanas)</li>
-        <li>Tableau & Power BI</li>
-        <li>Análisis exploratorio de datos (EDA)</li>
-      </ul>
+      <div class="card">
+        <h2>Qué encontrarás aquí</h2>
+        <ul>
+          <li>Proyectos end-to-end</li>
+          <li>Métricas orientadas a negocio</li>
+          <li>Dashboards y análisis reproducibles</li>
+        </ul>
+      </div>
     </div>
 
     <!-- PROYECTOS -->
-    <div class="card">
+    <div class="projects">
       <h2>Proyectos</h2>
-      <ul>
-        <li>AB Testing & Marketing Analysis</li>
-        <li>Book Service (SQL)</li>
-        <li>Vehicle Dashboard</li>
-      </ul>
+      <div class="project-grid">
+        <div class="project">
+          <img src="assets/img/book-data-analysis.png" alt="Book Data Analysis">
+          <div class="info">Book Data Analysis</div>
+        </div>
+
+        <div class="project">
+          <img src="assets/img/ab-testing-marketing-analysis.png" alt="AB Testing Marketing">
+          <div class="info">AB Testing & Marketing Analysis</div>
+        </div>
+
+        <div class="project">
+          <img src="assets/img/vehicle-dashboard.png" alt="Vehicle Dashboard">
+          <div class="info">Vehicle Dashboard</div>
+        </div>
+      </div>
     </div>
 
     <footer>
