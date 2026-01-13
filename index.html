@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>José Enrique | Portafolio Data Analyst</title>
 
   <style>
@@ -14,241 +14,135 @@
       --acc:#7aa2ff;
       --border:#20283a;
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
     body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background:radial-gradient(1200px 700px at 20% 0%,#101a2d 0%,var(--bg) 60%);
-      color:var(--txt);
+      background: var(--bg);
+      color: var(--txt);
+      line-height: 1.6;
     }
-    a{color:var(--acc);text-decoration:none}
-    a:hover{text-decoration:underline}
 
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .container{
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-    .hero{
-      display:flex;gap:18px;flex-wrap:wrap;align-items:center;
-      border:1px solid var(--border);border-radius:18px;padding:22px;
-      background:linear-gradient(180deg,#121622,#0f1420);
+    /* Perfil */
+    .profile{
+      text-align: center;
+      margin-bottom: 30px;
     }
-    .avatar{
-      width:92px;height:92px;border-radius:18px;
-      background:#1b2333;display:grid;place-items:center;
-      font-weight:800;color:#cfe0ff;
-    }
-    .tagline{color:var(--muted);margin-top:6px}
 
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid var(--border);
-      border-radius:12px;
-      background:#0f1420;
-      margin-right:8px;
-      margin-top:10px;
+    .profile img{
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--acc);
+      margin-bottom: 15px;
     }
-    .btn:hover{background:#121a2a;text-decoration:none}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:14px;
-      margin-top:20px;
+    h1{
+      font-size: 2rem;
+      margin-bottom: 5px;
     }
+
+    .subtitle{
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* Tarjetas */
     .card{
-      grid-column:span 12;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:16px;
-    }
-    @media(min-width:900px){
-      .half{grid-column:span 6}
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 25px;
     }
 
-    .projects{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:14px;
-      margin-top:12px;
-    }
-    .proj{
-      grid-column:span 12;
-      border:1px solid var(--border);
-      border-radius:16px;
-      overflow:hidden;
-      background:linear-gradient(180deg,#121622,#0f1420);
-    }
-    @media(min-width:900px){
-      .proj{grid-column:span 6}
+    h2{
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--acc);
     }
 
-    .thumb{
-      width:100%;
-      aspect-ratio:16/9;
-      background:#0f1420;
-      border-bottom:1px solid var(--border);
-      display:block;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-    .proj-body{padding:14px 16px}
-    .proj-body h3{margin:0 0 6px 0;font-size:16px}
-    .proj-body p{margin:0 0 10px 0;color:var(--muted);line-height:1.45;font-size:13px}
-
-    .chips{margin:8px 0 10px 0}
-    .chips span{
-      display:inline-block;
-      border:1px solid #2a3550;
-      border-radius:999px;
-      padding:4px 10px;
-      font-size:12px;
-      color:var(--muted);
-      margin-right:6px;
-      margin-bottom:6px;
+    p{
+      color: var(--muted);
+      margin-bottom: 10px;
     }
 
-    .footer{margin-top:18px;color:var(--muted);font-size:12px}
+    ul{
+      margin-left: 20px;
+      color: var(--muted);
+    }
+
+    li{
+      margin-bottom: 6px;
+    }
+
+    footer{
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <div class="container">
 
-    <section class="hero">
-      <div class="avatar">JE</div>
-      <div>
-        <h1 style="margin:0">José Enrique | Data Analyst Jr</h1>
-        <div class="tagline">SQL · Python · Tableau · Power BI · Análisis estadístico</div>
+    <!-- PERFIL -->
+    <div class="profile">
+      <img src="assets/img/profile.jpg" alt="Foto de perfil de José Enrique">
+      <h1>José Enrique</h1>
+      <div class="subtitle">Data Analyst Jr · Python · SQL · BI</div>
+    </div>
 
-        <a class="btn" href="https://github.com/Xmahana1" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
-      </div>
-    </section>
+    <!-- SOBRE MÍ -->
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>
+        Analista de datos junior con formación científica y experiencia en análisis,
+        visualización y toma de decisiones basada en datos. Interesado en salud,
+        marketing y proyectos con impacto real.
+      </p>
+    </div>
 
-    <section class="grid">
+    <!-- HABILIDADES -->
+    <div class="card">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Python (pandas, numpy, matplotlib)</li>
+        <li>SQL (consultas complejas, CTEs, ventanas)</li>
+        <li>Tableau & Power BI</li>
+        <li>Análisis exploratorio de datos (EDA)</li>
+      </ul>
+    </div>
 
-      <div class="card half">
-        <h2 style="margin-top:0">Sobre mí</h2>
-        <p style="margin:0;color:var(--muted);line-height:1.5">
-          Soy biólogo entomólogo en transición a análisis de datos, enfocado en métricas, pruebas, segmentación y dashboards.
-        </p>
-      </div>
+    <!-- PROYECTOS -->
+    <div class="card">
+      <h2>Proyectos</h2>
+      <ul>
+        <li>AB Testing & Marketing Analysis</li>
+        <li>Book Service (SQL)</li>
+        <li>Vehicle Dashboard</li>
+      </ul>
+    </div>
 
-      <div class="card half">
-        <h2 style="margin-top:0">Qué encontrarás aquí</h2>
-        <ul style="margin:0;color:var(--muted);line-height:1.6">
-          <li>Proyectos end-to-end</li>
-          <li>Métricas orientadas a negocio</li>
-          <li>Dashboards y análisis reproducibles</li>
-        </ul>
-      </div>
+    <footer>
+      © 2026 · José Enrique
+    </footer>
 
-      <div class="card">
-        <h2 style="margin-top:0">Proyectos</h2>
-
-        <div class="projects">
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis" target="_blank" rel="noopener">
-              <img src="assets/img/ab-testing-marketing-analysis.png" alt="A/B Testing — Marketing Analysis"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>A/B Testing — Marketing Analysis</h3>
-              <p>Evaluación de un experimento A/B: significancia estadística, métricas y decisión de rollout.</p>
-              <div class="chips"><span>Python</span><span>Estadística</span><span>A/B testing</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/Book-Service" target="_blank" rel="noopener">
-              <img src="assets/img/book-data-analysis.png" alt="Book Service — Data Analysis"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>Book Service — Data Analysis</h3>
-              <p>Exploración y análisis de datos para entender comportamiento del servicio e insights accionables.</p>
-              <div class="chips"><span>SQL</span><span>Python</span><span>EDA</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/Book-Service" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/Vehicle-Dashboard-" target="_blank" rel="noopener">
-              <img src="assets/img/vehicle-dashboard.png" alt="Vehicle Dashboard — Streamlit"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>Vehicle Dashboard — Streamlit</h3>
-              <p>App interactiva para explorar un dataset de ventas de vehículos con filtros y visualizaciones.</p>
-              <div class="chips"><span>Python</span><span>Streamlit</span><span>Dashboards</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/Vehicle-Dashboard-" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis" target="_blank" rel="noopener">
-              <img src="assets/img/sql-vehicle-pricing-analysis.png" alt="SQL — Vehicle Pricing Analysis"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>SQL — Vehicle Pricing Analysis</h3>
-              <p>Análisis SQL para identificar patrones de precios, segmentación y anomalías.</p>
-              <div class="chips"><span>SQL</span><span>Segmentación</span><span>Insights</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC" target="_blank" rel="noopener">
-              <img src="assets/img/marketing-analytics-romi-cac.jpg" alt="Marketing Analytics — ROMI & CAC"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>Marketing Analytics — ROMI & CAC</h3>
-              <p>Evaluación de campañas: inversión, retornos, CAC y recomendaciones accionables.</p>
-              <div class="chips"><span>Python</span><span>Métricas</span><span>Marketing</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <a class="thumb" href="https://github.com/Xmahana1/Telecom-CallMeMaybe" target="_blank" rel="noopener">
-              <img src="assets/img/telecom-call-center-efficiency-analysis.png" alt="Telecom — Call Center Efficiency"
-                   loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#16233a,#0f1420)';">
-            </a>
-            <div class="proj-body">
-              <h3>Telecom — Call Center Efficiency</h3>
-              <p>Análisis de desempeño de operadores: eficiencia, calidad y oportunidades de mejora.</p>
-              <div class="chips"><span>Python</span><span>EDA</span><span>KPIs</span></div>
-              <a class="btn" href="https://github.com/Xmahana1/Telecom-CallMeMaybe" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="footer">© <span id="y"></span> José Enrique — Portafolio</div>
-      </div>
-
-    </section>
   </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
