@@ -1,229 +1,516 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio de Analista de Datos Jr: proyectos, dashboards, análisis y SQL." />
   <title>José Enrique | Data Analyst Jr</title>
 
   <style>
     :root{
-      --bg:#0b0d10;
-      --card:#121622;
-      --txt:#e9eef5;
-      --muted:#a9b3c1;
-      --acc:#7aa2ff;
-      --border:#20283a;
+      --bg: #070b12;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --border: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.58);
+      --accent: #7aa2ff;
+      --accent2:#9bdcff;
+      --shadow: 0 18px 45px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 22px;
+      --maxw: 1080px;
     }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    }
-
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
-      background:var(--bg);
-      color:var(--txt);
-      line-height:1.6;
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(122,162,255,.18), transparent 60%),
+        radial-gradient(900px 600px at 85% 25%, rgba(155,220,255,.10), transparent 55%),
+        radial-gradient(900px 600px at 60% 95%, rgba(122,162,255,.10), transparent 55%),
+        var(--bg);
+      min-height:100vh;
     }
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:40px 20px;
+    a{color:inherit; text-decoration:none}
+    a:focus, button:focus{outline: 2px solid rgba(122,162,255,.6); outline-offset: 2px}
+
+    .wrap{max-width: var(--maxw); margin: 0 auto; padding: 26px 18px 60px}
+    .topbar{
+      position: sticky; top: 0;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,18,.55);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .topbar .inner{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+    .brand .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 18px rgba(122,162,255,.5);
     }
 
-    /* HERO */
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .chip{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      transition: .15s ease;
+    }
+    .chip:hover{transform: translateY(-1px); border-color: rgba(122,162,255,.35); color: var(--text)}
+    .chip.primary{
+      border-color: rgba(122,162,255,.35);
+      background: rgba(122,162,255,.12);
+      color: rgba(255,255,255,.92);
+    }
+
     .hero{
+      margin-top: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .heroRow{
       display:flex;
-      gap:24px;
+      gap:18px;
       align-items:center;
-      background:linear-gradient(135deg,#0f1420,#0b0d10);
-      border:1px solid var(--border);
-      border-radius:20px;
-      padding:32px;
-      margin-bottom:32px;
-    }
-
-    .avatar{
-      width:96px;
-      height:96px;
-      border-radius:20px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#0f1420;
-      flex-shrink:0;
-    }
-
-    .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .hero h1{
-      font-size:1.8rem;
-      margin-bottom:6px;
-    }
-
-    .hero p{
-      color:var(--muted);
-      margin-bottom:14px;
-    }
-
-    .buttons{
-      display:flex;
-      gap:10px;
       flex-wrap:wrap;
     }
+    .avatar{
+      width: 82px; height: 82px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,.45);
+      background: rgba(255,255,255,.04);
+    }
+    .heroText{flex: 1 1 420px; min-width: 240px}
+    h1{margin:0; font-size: 26px; line-height:1.1}
+    .subtitle{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin-top: 12px}
+    .pill{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.035);
+      color: rgba(255,255,255,.78);
+    }
 
+    .ctaRow{
+      margin-top: 14px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
     .btn{
-      padding:8px 14px;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:#0f1420;
-      color:var(--txt);
-      text-decoration:none;
-      font-size:.9rem;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.90);
+      font-size: 14px;
+      transition: .15s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(122,162,255,.35)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(122,162,255,.22), rgba(155,220,255,.14));
+      border-color: rgba(122,162,255,.35);
     }
 
-    .btn:hover{
-      border-color:var(--acc);
-      color:var(--acc);
-    }
-
-    /* GRID */
-    .grid{
+    .grid2{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
     }
-
+    @media (max-width: 860px){
+      .grid2{grid-template-columns: 1fr}
+    }
     .card{
-      background:linear-gradient(135deg,#0f1420,#0b0d10);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:24px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: rgba(255,255,255,.92);
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.55;
+      font-size: 14px;
+      white-space: pre-line;
+    }
+    .list{
+      margin:0; padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
     }
 
-    h2{
-      font-size:1.2rem;
-      margin-bottom:10px;
-      color:var(--acc);
+    .section{margin-top: 26px}
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sectionTitle h3{margin:0; font-size: 18px}
+    .sectionTitle span{color: var(--muted2); font-size: 13px}
+
+    .tools{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 10px;
     }
 
-    ul{
-      margin-left:18px;
-      color:var(--muted);
-    }
-
-    li{
-      margin-bottom:6px;
-    }
-
-    /* PROYECTOS */
     .projects{
-      margin-top:32px;
-    }
-
-    .project-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
+    @media (max-width: 980px){ .projects{grid-template-columns: repeat(2, 1fr)} }
+    @media (max-width: 640px){ .projects{grid-template-columns: 1fr} }
 
-    .project{
-      background:#0f1420;
-      border:1px solid var(--border);
-      border-radius:16px;
+    .proj{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.035);
+      border-radius: var(--radius);
       overflow:hidden;
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+      display:flex;
+      flex-direction:column;
+      min-height: 340px;
     }
-
-    .project img{
+    .projImg{
       width:100%;
-      display:block;
+      height: 160px;
+      object-fit: cover;
+      background: rgba(255,255,255,.03);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-
-    .project .info{
-      padding:16px;
+    .projBody{padding: 14px; display:flex; flex-direction:column; gap:10px; flex:1}
+    .projKicker{
+      color: rgba(122,162,255,.95);
+      font-size: 12px;
+      letter-spacing:.3px;
+      text-transform: uppercase;
     }
+    .projTitle{margin:0; font-size: 16px}
+    .projDesc{margin:0; color: var(--muted); font-size: 13.5px; line-height:1.55}
+    .projTags{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto}
+    .tag{
+      font-size: 11.5px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.75);
+    }
+    .projActions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      padding: 14px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+    }
+    .projActions a{flex:1}
+    .projActions .btn{width:100%}
 
     footer{
-      text-align:center;
-      margin-top:40px;
-      color:var(--muted);
-      font-size:.85rem;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 18px;
+      color: var(--muted2);
+      font-size: 13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      justify-content:space-between;
+      align-items:center;
     }
+
+    .smallLinks{display:flex; gap:10px; flex-wrap:wrap}
+    .smallLinks a{color: rgba(255,255,255,.78)}
+    .smallLinks a:hover{color: rgba(255,255,255,.92)}
   </style>
 </head>
 
 <body>
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="avatar">
-        <img src="assets/img/profile2.jpg" alt="Foto de perfil de José Enrique">
-
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="dot"></div>
+        <div>Portfolio Analista</div>
       </div>
-      <div>
-        <h1>José Enrique | Data Analyst Jr</h1>
-        <p>SQL · Python · Tableau · Power BI · Análisis estadístico</p>
-        <div class="buttons">
-          <a class="btn" href="https://github.com/Xmahana1" target="_blank">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/jos%C3%A9-enrique-pi%C3%B1ango/" target="_blank">LinkedIn</a>
-          <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
-        </div>
+      <div class="nav">
+        <a class="chip" href="#sobre-mi">Sobre mí</a>
+        <a class="chip" href="#herramientas">Herramientas</a>
+        <a class="chip" href="#proyectos">Proyectos</a>
+        <a class="chip primary" href="#contacto">Contacto</a>
       </div>
     </div>
+  </div>
 
-    <!-- INFO -->
-    <div class="grid">
+  <div class="wrap">
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="heroRow">
+        <img class="avatar" src="./assets/img/profile.jpg" alt="Foto de perfil de José Enrique" />
+
+        <div class="heroText">
+          <h1>José Enrique | Data Analyst Jr</h1>
+          <p class="subtitle">SQL · Python · Tableau · Power BI · Análisis estadístico</p>
+
+          <div class="pillrow" aria-label="Áreas de enfoque">
+            <span class="pill">Métricas</span>
+            <span class="pill">EDA</span>
+            <span class="pill">Dashboards</span>
+            <span class="pill">A/B testing</span>
+            <span class="pill">Automatización de reportes</span>
+          </div>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="https://github.com/Xmahana1" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/josé-enrique-piñango-analisisdedatos" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="mailto:insectario.jr@gmail.com">Email</a>
+            <a class="btn" href="https://wa.me/522223544678" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two cards (formato tipo 4ª imagen) -->
+      <div class="grid2">
+        <div class="card" id="sobre-mi">
+          <h2>Sobre mí</h2>
+          <p><strong>Analista de Datos en formación</strong>, orientado a convertir datos en información útil para apoyar decisiones de negocio. Experiencia en análisis exploratorio, visualización de datos y creación de dashboards. Enfoque analítico, pensamiento crítico y comunicación clara de hallazgos.
+
+Motivado por aprender, resolver problemas y generar impacto a través de decisiones basadas en datos.</p>
+        </div>
+
+        <div class="card">
+          <h2>Qué encontrarás aquí</h2>
+          <ul class="list">
+            <li>Proyectos end-to-end</li>
+            <li>Métricas orientadas a negocio</li>
+            <li>Dashboards y análisis reproducibles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="section" id="herramientas">
+        <div class="sectionTitle">
+          <h3>Herramientas</h3>
+          <span>stack principal</span>
+        </div>
+        <div class="tools">
+          <span class="pill">SQL</span>
+          <span class="pill">Python (pandas, numpy)</span>
+          <span class="pill">Visualización</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Estadística</span>
+          <span class="pill">A/B Testing</span>
+          <span class="pill">Streamlit</span>
+          <span class="pill">Git / GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="proyectos">
+      <div class="sectionTitle">
+        <h3>Proyectos</h3>
+        <span>repositorios y casos de negocio</span>
+      </div>
+
+      <div class="projects">
+        <!-- 1 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/ab-testing-marketing-analysis.png" alt="AB Testing - Marketing Analysis" />
+          <div class="projBody">
+            <div class="projKicker">A/B Testing</div>
+            <h4 class="projTitle">AB Testing — Marketing Analysis</h4>
+            <p class="projDesc">Evaluación de experimento A/B (control vs variante) para medir significancia estadística e impacto de negocio en comportamiento y conversión.</p>
+            <div class="projTags">
+              <span class="tag">Estadística</span>
+              <span class="tag">Métricas</span>
+              <span class="tag">Experimentación</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/AB-Testing-Marketing-Analysis" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/book-data-analysis.png" alt="Book Service - Data Analysis" />
+          <div class="projBody">
+            <div class="projKicker">EDA</div>
+            <h4 class="projTitle">Book Service — Data Analysis</h4>
+            <p class="projDesc">Análisis exploratorio de base de libros (autores, editoriales, ratings y reviews) para identificar insights sobre tendencias, comportamiento y calidad.</p>
+            <div class="projTags">
+              <span class="tag">EDA</span>
+              <span class="tag">Insights</span>
+              <span class="tag">Reportes</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/Book-Service" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/vehicle-dashboard.png" alt="Vehicle Dashboard" />
+          <div class="projBody">
+            <div class="projKicker">Dashboard</div>
+            <h4 class="projTitle">Vehicle Dashboard (Streamlit)</h4>
+            <p class="projDesc">App interactiva para explorar y visualizar dataset de ventas de vehículos en EE. UU. para análisis inicial sin escribir código.</p>
+            <div class="projTags">
+              <span class="tag">Streamlit</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Visualización</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/Vehicle-Dashboard-" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/sql-vehicle-pricing-analysis.png" alt="SQL Vehicle Pricing Analysis" />
+          <div class="projBody">
+            <div class="projKicker">SQL</div>
+            <h4 class="projTitle">SQL — Vehicle Pricing Analysis</h4>
+            <p class="projDesc">Análisis SQL del mercado de vehículos para identificar patrones de precios, diferencias por categoría y anomalías para insights estratégicos.</p>
+            <div class="projTags">
+              <span class="tag">SQL</span>
+              <span class="tag">Pricing</span>
+              <span class="tag">Anomalías</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/SQL-Vehicle-Pricing-Analysis" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/telecom-call-center-efficiency-analysis.png" alt="Telecom Call Center Efficiency Analysis" />
+          <div class="projBody">
+            <div class="projKicker">Operaciones</div>
+            <h4 class="projTitle">Telecom — Call Center Efficiency</h4>
+            <p class="projDesc">Caso de analítica operativa: identificar operadores ineficientes, cuantificar impacto de negocio y priorizar acciones para reducir pérdidas.</p>
+            <div class="projTags">
+              <span class="tag">KPIs</span>
+              <span class="tag">Operaciones</span>
+              <span class="tag">Impacto</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/Telecom-CallMeMaybe" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="proj">
+          <img class="projImg" src="./assets/img/marketing-analytics-romi-cac.jpg" alt="Marketing Project ROMI & CAC" />
+          <div class="projBody">
+            <div class="projKicker">Marketing Analytics</div>
+            <h4 class="projTitle">Marketing — ROMI & CAC</h4>
+            <p class="projDesc">Caso de negocio enfocado en impacto en revenue y eficiencia de presupuesto. Medición de ROMI, CAC y métricas de vida del usuario.</p>
+            <div class="projTags">
+              <span class="tag">ROMI</span>
+              <span class="tag">CAC</span>
+              <span class="tag">Budget</span>
+            </div>
+          </div>
+          <div class="projActions">
+            <a href="https://github.com/Xmahana1/-Marketing-Project-ROMI-CAC" target="_blank" rel="noopener">
+              <span class="btn primary">Ver repo</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact (narrativa base con contacto) -->
+    <section class="section" id="contacto">
+      <div class="sectionTitle">
+        <h3>Contacto</h3>
+        <span>narrativa base con contacto</span>
+      </div>
+
       <div class="card">
-        <h2>Sobre mí</h2>
-        <p style="color:var(--muted)">
-          Biólogo entomólogo en transición a análisis de datos, enfocado en métricas,
-          pruebas, segmentación y dashboards orientados a negocio.
-        </p>
-      </div>
+        <h2>Perfil</h2>
+        <p>Soy un analista de datos en formación, orientado a transformar datos en información útil para apoyar decisiones de negocio. Me enfoco en análisis exploratorio, visualización, dashboards y comunicación clara de hallazgos para generar impacto mediante decisiones basadas en datos.</p>
 
-      <div class="card">
-        <h2>Qué encontrarás aquí</h2>
-        <ul>
-          <li>Proyectos end-to-end</li>
-          <li>Métricas orientadas a negocio</li>
-          <li>Dashboards y análisis reproducibles</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- PROYECTOS -->
-    <div class="projects">
-      <h2>Proyectos</h2>
-      <div class="project-grid">
-        <div class="project">
-          <img src="assets/img/book-data-analysis.png" alt="Book Data Analysis">
-          <div class="info">Book Data Analysis</div>
-        </div>
-
-        <div class="project">
-          <img src="assets/img/ab-testing-marketing-analysis.png" alt="AB Testing Marketing">
-          <div class="info">AB Testing & Marketing Analysis</div>
-        </div>
-
-        <div class="project">
-          <img src="assets/img/vehicle-dashboard.png" alt="Vehicle Dashboard">
-          <div class="info">Vehicle Dashboard</div>
+        <div class="ctaRow" style="margin-top:14px">
+          <a class="btn primary" href="https://github.com/Xmahana1" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/josé-enrique-piñango-analisisdedatos" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:insectario.jr@gmail.com">insectario.jr@gmail.com</a>
+          <a class="btn" href="https://wa.me/522223544678" target="_blank" rel="noopener">+52 222 354 4678</a>
         </div>
       </div>
-    </div>
+    </section>
 
     <footer>
-      © 2026 · José Enrique
+      <div>© <span id="y"></span> José Enrique · Data Analyst Jr</div>
+      <div class="smallLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </footer>
-
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
